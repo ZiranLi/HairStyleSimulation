@@ -14,6 +14,7 @@
 		CC2648021D6A9C2F00C9E5B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2648001D6A9C2F00C9E5B1 /* Main.storyboard */; };
 		CC2648041D6A9C2F00C9E5B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2648031D6A9C2F00C9E5B1 /* Assets.xcassets */; };
 		CC2648071D6A9C2F00C9E5B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2648051D6A9C2F00C9E5B1 /* LaunchScreen.storyboard */; };
+		EE458C6D1FA3AC3000524DF0 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE458C6C1FA3AC3000524DF0 /* ChooseViewController.swift */; };
 		EEA75D571F9D93230051E6D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEA75D561F9D923F0051E6D6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		CC2648031D6A9C2F00C9E5B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC2648061D6A9C2F00C9E5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC2648081D6A9C2F00C9E5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE458C6C1FA3AC3000524DF0 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		EEA75D561F9D923F0051E6D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 			children = (
 				CC2647FC1D6A9C2F00C9E5B1 /* AppDelegate.swift */,
 				CC2647FE1D6A9C2F00C9E5B1 /* ViewController.swift */,
+				EE458C6C1FA3AC3000524DF0 /* ChooseViewController.swift */,
 				CC2648001D6A9C2F00C9E5B1 /* Main.storyboard */,
 				5728F7001D6B4D0A00014D42 /* CameraViewController.swift */,
 				CC2648031D6A9C2F00C9E5B1 /* Assets.xcassets */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2647FF1D6A9C2F00C9E5B1 /* ViewController.swift in Sources */,
+				EE458C6D1FA3AC3000524DF0 /* ChooseViewController.swift in Sources */,
 				CC2647FD1D6A9C2F00C9E5B1 /* AppDelegate.swift in Sources */,
 				5728F7011D6B4D0A00014D42 /* CameraViewController.swift in Sources */,
 			);
