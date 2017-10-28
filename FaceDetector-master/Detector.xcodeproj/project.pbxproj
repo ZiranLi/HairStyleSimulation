@@ -15,6 +15,7 @@
 		CC2648041D6A9C2F00C9E5B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2648031D6A9C2F00C9E5B1 /* Assets.xcassets */; };
 		CC2648071D6A9C2F00C9E5B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2648051D6A9C2F00C9E5B1 /* LaunchScreen.storyboard */; };
 		EE458C6D1FA3AC3000524DF0 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE458C6C1FA3AC3000524DF0 /* ChooseViewController.swift */; };
+		EE458C6F1FA3D88200524DF0 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE458C6E1FA3D88200524DF0 /* EditViewController.swift */; };
 		EEA75D571F9D93230051E6D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEA75D561F9D923F0051E6D6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		CC2648061D6A9C2F00C9E5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC2648081D6A9C2F00C9E5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE458C6C1FA3AC3000524DF0 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		EE458C6E1FA3D88200524DF0 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		EEA75D561F9D923F0051E6D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				CC2647FE1D6A9C2F00C9E5B1 /* ViewController.swift */,
 				EE458C6C1FA3AC3000524DF0 /* ChooseViewController.swift */,
 				CC2648001D6A9C2F00C9E5B1 /* Main.storyboard */,
+				EE458C6E1FA3D88200524DF0 /* EditViewController.swift */,
 				5728F7001D6B4D0A00014D42 /* CameraViewController.swift */,
 				CC2648031D6A9C2F00C9E5B1 /* Assets.xcassets */,
 				CC2648051D6A9C2F00C9E5B1 /* LaunchScreen.storyboard */,
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE458C6F1FA3D88200524DF0 /* EditViewController.swift in Sources */,
 				CC2647FF1D6A9C2F00C9E5B1 /* ViewController.swift in Sources */,
 				EE458C6D1FA3AC3000524DF0 /* ChooseViewController.swift in Sources */,
 				CC2647FD1D6A9C2F00C9E5B1 /* AppDelegate.swift in Sources */,
