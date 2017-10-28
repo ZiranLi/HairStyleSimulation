@@ -58,11 +58,18 @@ class ChooseViewController: UIViewController,UIImagePickerControllerDelegate,UIN
      let imageData = UIImageJPEGRepresentation(pickImage.image!, 0.6)
         let compressedJPEGImage = UIImage(data:imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPEGImage!, nil, nil, nil)
+        saveNotice()
     }
    
     func imagePickerController(_ picker:UIImagePickerController, didFinishPickingImage image:UIImage!,editingInfo:[NSObject: AnyObject]!){
         pickImage.image = image
         self.dismiss(animated:true, completion:nil);
+    }
+    func saveNotice(){
+        let alertController = UIAlertController(title:"Image Saved!", message: "Your picture was successfully saved.", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title:"OK",style: .default,handler:nil)
+        alertController.addAction(defaultAction)
+        present(alertController,animated: true, completion:nil)
     }
     
 }
