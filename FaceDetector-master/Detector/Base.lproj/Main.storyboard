@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face-3" translatesAutoresizingMaskIntoConstraints="NO" id="mz7-h3-qap">
-                                <rect key="frame" x="-4" y="20" width="383" height="598"/>
+                                <rect key="frame" x="-4" y="20" width="383" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,9 +76,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="imageView" destination="2Ik-iq-FXY" id="ikg-mE-QIV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTf-Ll-iIY" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,10 +91,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lSU-Xd-CXc"/>
-                        <segue destination="4aF-GE-jEW" kind="relationship" relationship="viewControllers" id="LpY-Oi-fUt"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwK-6Z-saB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,15 +198,93 @@
                     <connections>
                         <outlet property="emailTextField" destination="vst-Vo-59C" id="ls7-Mn-f48"/>
                         <outlet property="passwordTextField" destination="Ari-J9-12r" id="v3m-OY-64x"/>
-                        <outlet property="signInButton" destination="8oJ-C7-ICC" id="glM-yp-Hgr"/>
+                        <outlet property="signInButton" destination="8oJ-C7-ICC" id="Xfs-kW-NYC"/>
                         <outlet property="signInLabel" destination="YPd-Dh-pcV" id="dd2-Yz-RYN"/>
                         <outlet property="signInSelector" destination="pJK-th-40k" id="RS6-3Y-C2r"/>
-                        <segue destination="cnS-dp-o7f" kind="show" identifier="goToHome" id="7Zi-tg-c7w"/>
+                        <segue destination="3TD-mB-yTM" kind="show" identifier="goToHome" id="zSA-in-oq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvS-sw-qSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-634.39999999999998" y="98.50074962518741"/>
+            <point key="canvasLocation" x="-1278" y="99"/>
+        </scene>
+        <!--Choose View Controller-->
+        <scene sceneID="jVa-6y-fIV">
+            <objects>
+                <viewController id="3TD-mB-yTM" customClass="ChooseViewController" customModule="Detector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r3o-QP-4II"/>
+                        <viewControllerLayoutGuide type="bottom" id="ESQ-v0-WHy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h3B-6d-6Fq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uc-5D-El4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibY-9m-ef6">
+                                <rect key="frame" x="313" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="3TD-mB-yTM" eventType="touchUpInside" id="XPn-fZ-h15"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wet-Ax-VYH">
+                                <rect key="frame" x="160" y="466" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonAction:" destination="3TD-mB-yTM" eventType="touchUpInside" id="gSP-GH-XhZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkd-eJ-nhV">
+                                <rect key="frame" x="141" y="555" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="photoLibraryAction:" destination="3TD-mB-yTM" eventType="touchUpInside" id="WKg-3O-9Fn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickImage" destination="1uc-5D-El4" id="JaY-GY-NA0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3s-Ll-Ll6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394.39999999999998" y="771.36431784107947"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="QvR-9m-ujZ">
+            <objects>
+                <viewController id="UGC-uy-buf" customClass="EditViewController" customModule="Detector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y9E-Lq-pUf"/>
+                        <viewControllerLayoutGuide type="bottom" id="dxS-ql-m78"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9kR-ma-4Un">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9on-Id-dvT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9on-Id-dvT" id="gOU-gb-VXX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JaX-G0-azA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.79999999999995" y="781.25937031484261"/>
         </scene>
         <!--Camera-->
         <scene sceneID="Cb4-xL-lNl">
@@ -226,9 +297,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FHe-mm-V9Z" kind="relationship" relationship="rootViewController" id="WCv-nV-LRe"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5S-eQ-KXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

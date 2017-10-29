@@ -38,6 +38,10 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>To take photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To show your photo</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
