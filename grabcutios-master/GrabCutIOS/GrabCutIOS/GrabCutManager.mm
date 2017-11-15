@@ -31,7 +31,9 @@
     
     CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
     CGContextRelease(contextRef);
-    
+    //std::cout<<cvMat.rows<<std::endl;  //450
+    //std::cout<<cvMat.cols<<std::endl;  //450
+    //std::cout<<cvMat<<std::endl;
     return cvMat;
 }
 
@@ -54,7 +56,6 @@
     
     CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
     CGContextRelease(contextRef);
-    
     return cvMat;
 }
 
@@ -75,6 +76,8 @@
     CGColorSpaceRelease(colorSpace);
     
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
+    //std::cout<<width<<std::endl; //450
+    //std::cout<<context<<std::endl;
     CGContextRelease(context);
     
     //    cv::Mat1b markers((int)height, (int)width);
@@ -107,7 +110,7 @@
     free(rawData);
     
     NSLog(@"Count %d %d %d sum : %d width*height : %d", countFGD, countBGD, countRem, countFGD+countBGD + countRem, width*height);
-    
+    //std::cout<<markers<<std::endl;[0,0,0,0...;0,0,0,0,...;1,1,1,1,....]
     return markers;
 }
 
@@ -145,7 +148,7 @@
     CGImageRelease(imageRef);
     CGDataProviderRelease(provider);
     CGColorSpaceRelease(colorSpace);
-    
+    //std::cout<<finalImage<<std::endl;
     return finalImage;
 }
 
@@ -155,6 +158,7 @@
     
     cv::Mat cvMat(rows, cols, CV_8UC3); // 8 bits per component, 4 channels (color channels + alpha)
     cvMat.setTo(0);
+    
     
     uchar* data = mask.data;
     
@@ -184,7 +188,7 @@
     }
     
     NSLog(@"fgd : %d bgd : %d pfgd : %d pbgd : %d total : %d width*height : %d", fgd,bgd,pfgd,pbgd, fgd+bgd+pfgd+pbgd, cols*rows);
-    
+    //std::cout<<cvMat<<std::endl;
     return cvMat;
 }
 
@@ -223,7 +227,7 @@
     }
     
     NSLog(@"fgd : %d bgd : %d pfgd : %d pbgd : %d total : %d width*height : %d", fgd,bgd,pfgd,pbgd, fgd+bgd+pfgd+pbgd, cols*rows);
-    
+    //std::cout<<cvMat<<std::endl;//0:source image 255:mask
     return cvMat;
 }
 
@@ -249,7 +253,6 @@
     // Get the pixels marked as likely foreground
     
     UIImage* resultImage = [self UIImageFromCVMat:[self resultMaskToMatrix:sourceImage.size]];
-    
 //    cv::Mat tempMask;
 //    cv::compare(mask,cv::GC_PR_FGD,tempMask,cv::CMP_EQ);
 //    // Generate output image
@@ -263,8 +266,8 @@
 //    img.copyTo(foreground, tempMask);
     
 //    UIImage* resultImage=[self UIImageFromCVMat:foreground];
-    
     return resultImage;
+    //return 0;
 }
 
 -(UIImage*) doGrabCutWithMask:(UIImage*)sourceImage maskImage:(UIImage*)maskImage iterationCount:(int) iterCount{
@@ -273,6 +276,7 @@
     
     cv::Mat1b markers=[self cvMatMaskerFromUIImage:maskImage];
     cv::Rect rectangle(0,0,0,0);
+    //cv::Rect rectangle1(100,50,100,50);
     // GrabCut segmentation
     cv::grabCut(img, markers, rectangle, bgModel, fgModel, iterCount, cv::GC_INIT_WITH_MASK);
     
@@ -282,10 +286,17 @@
     cv::Mat foreground(img.size(),CV_8UC3,
                        cv::Scalar(255,255,255));
     
-    tempMask=tempMask&1;
-    img.copyTo(foreground, tempMask);
+    //std::cout<<tempMask<<std::endl;
+    tempMask=tempMask&1; //convert all 255 to 1
+    //tempMask=Mat::zeros(img.size(),CV_8UC1);
+    //tempMask(rectangle1).setTo(255);
     
-    UIImage* resultImage=[self UIImageFromCVMat:foreground];
+    img.copyTo(foreground, tempMask);
+    //img.copyTo(tempMask,foreground);
+    //img.setTo(0,tempMask);
+    //UIImage* resultImage=[self UIImageFromCVMat:foreground];
+    //UIImage* imgShow=[self UIImageFromCVMat:img];
+    //UIImage* resultImage=[self UIImageFromCVMat:tempMask];
     
     //    UIImage* resultImage =[self UIImageFromCVMat:[self maskImageToMatrix:sourceImage.size]];
     
@@ -298,7 +309,10 @@
     
     
     //    UIImage* resultImage=[self UIImageFromCVMat:tmp];
-    
+    //std::cout<<resultImage<<std::endl;
+    //cv::imshow("show image", tempMask);
+    cv::Mat background =  ~ foreground;
+    UIImage* resultImage=[self UIImageFromCVMat:background];
     return resultImage;
 }
 @end
