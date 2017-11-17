@@ -19,6 +19,8 @@
 		905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F61151B91A43B00094E52 /* TouchDrawView.m */; };
 		90DE070C1B92A4FA009311B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */; };
 		90DE07101B92C371009311B8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90DE070F1B92C371009311B8 /* test.jpg */; };
+		EE1916741FBE446600C17923 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1916731FBE446600C17923 /* GameViewController.swift */; };
+		EE1916781FBE4ECF00C17923 /* hair1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE1916771FBE4ECF00C17923 /* hair1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		905F61151B91A43B00094E52 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
 		90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		90DE070F1B92C371009311B8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		EE1916731FBE446600C17923 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EE1916771FBE4ECF00C17923 /* hair1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hair1.jpg; path = ../../../../../Desktop/hair1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				90DE070F1B92C371009311B8 /* test.jpg */,
+				EE1916771FBE4ECF00C17923 /* hair1.jpg */,
 				905F61111B91A43B00094E52 /* GrabCutManager.h */,
 				905F61121B91A43B00094E52 /* GrabCutManager.mm */,
+				EE1916731FBE446600C17923 /* GameViewController.swift */,
 				905F61141B91A43B00094E52 /* TouchDrawView.h */,
 				905F61151B91A43B00094E52 /* TouchDrawView.m */,
 				905F60EB1B919E8C00094E52 /* AppDelegate.h */,
@@ -191,6 +197,7 @@
 				TargetAttributes = {
 					905F60E31B919E8C00094E52 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0910;
 					};
 					905F60FC1B919E8C00094E52 = {
 						CreatedOnToolsVersion = 6.4;
@@ -222,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1916781FBE4ECF00C17923 /* hair1.jpg in Resources */,
 				905F60F31B919E8C00094E52 /* Main.storyboard in Resources */,
 				905F60F81B919E8C00094E52 /* LaunchScreen.xib in Resources */,
 				905F60F51B919E8C00094E52 /* Images.xcassets in Resources */,
@@ -247,6 +255,7 @@
 				905F60F01B919E8C00094E52 /* ViewController.mm in Sources */,
 				905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */,
 				905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */,
+				EE1916741FBE446600C17923 /* GameViewController.swift in Sources */,
 				905F60EA1B919E8C00094E52 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -385,6 +395,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -392,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -402,12 +415,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		905F610B1B919E8C00094E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -427,6 +442,7 @@
 		905F610C1B919E8C00094E52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
