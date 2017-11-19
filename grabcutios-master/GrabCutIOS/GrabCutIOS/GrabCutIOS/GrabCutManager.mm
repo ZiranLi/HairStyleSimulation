@@ -314,5 +314,6 @@
     cv::Mat background =  ~ foreground;
     UIImage* resultImage=[self UIImageFromCVMat:background];
     return resultImage;
+    //return 0;
 }
 @end
