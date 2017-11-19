@@ -111,6 +111,32 @@ const static int MAX_IMAGE_LENGTH = 450;
     // Dispose of any resources that can be recreated.
 }
 
+
+
+
+- (IBAction)btnPassData:(UIButton *)sender {
+    //let MainStory:UIStoryboard = UIStoryboard (name:"Main",bundle:nil);
+    //let desVC=MainStory.instantiateViewController(withIdentifier:"GameViewController") as! GameViewController
+    
+    //desVC.getImage = UIImage(namerrr)
+    //self.navigationController?.pushViewController(desVC, anitmated: true)
+    
+    NSLog(@"button triggered");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -(CGRect) getTouchedRectWithImageSize:(CGSize) size{
     CGFloat widthScale = size.width/self.imageView.frame.size.width;
     CGFloat heightScale = size.height/self.imageView.frame.size.height;
@@ -244,7 +270,7 @@ const static int MAX_IMAGE_LENGTH = 450;
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             [weakSelf.resultImageView setImage:resultImage];
-            [weakSelf.imageView setAlpha:0.2];
+            [weakSelf.imageView setAlpha:0.1];
             
             [weakSelf hideLoadingIndicatorView];
         });
@@ -259,14 +285,51 @@ const static int MAX_IMAGE_LENGTH = 450;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                              (unsigned long)NULL), ^(void) {
         UIImage* resultImage= [weakSelf.grabcut doGrabCutWithMask:weakSelf.resizedImage maskImage:[weakSelf resizeImage:image size:weakSelf.resizedImage.size] iterationCount:5];
+        
         resultImage = [weakSelf masking:weakSelf.originalImage mask:[weakSelf resizeImage:resultImage size:weakSelf.originalImage.size]];
+        
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             [weakSelf.resultImageView setImage:resultImage];
-            [weakSelf.imageView setAlpha:0.2];
+            [weakSelf.imageView setAlpha:0];
             [weakSelf hideLoadingIndicatorView];
+            UIImage* result=[self imageByCombiningImage:resultImage withImage:resultImage];
+            //Save
+            
+            UIImageWriteToSavedPhotosAlbum(result, self, nil, nil);
+            NSLog(@"ImageSaved");
+            
+            
         });
     });
+    
 }
+
+
+
+- (UIImage*)imageByCombiningImage:(UIImage*)firstImage withImage:(UIImage*)secondImage {
+    UIImage *image = nil;
+    
+    CGSize newImageSize = CGSizeMake(MAX(firstImage.size.width, secondImage.size.width), MAX(firstImage.size.height, secondImage.size.height));
+    if (UIGraphicsBeginImageContextWithOptions != NULL) {
+        UIGraphicsBeginImageContextWithOptions(newImageSize, NO, [[UIScreen mainScreen] scale]);
+    } else {
+        UIGraphicsBeginImageContext(newImageSize);
+    }
+    [firstImage drawAtPoint:CGPointMake(roundf((newImageSize.width-firstImage.size.width)/2),
+                                        roundf((newImageSize.height-firstImage.size.height)/2))];
+    [secondImage drawAtPoint:CGPointMake(roundf((newImageSize.width-secondImage.size.width)/2),
+                                         roundf((newImageSize.height-secondImage.size.height)/2))];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+
+
+
+
+
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"began");
@@ -368,7 +431,18 @@ const static int MAX_IMAGE_LENGTH = 450;
         _plusButton.enabled = YES;
         _minusButton.enabled = YES;
         _doGrabcutButton.enabled = YES;
+        
+        /*
+        //Save
+        
+        UIImageWriteToSavedPhotosAlbum(resultImage, self, nil, nil);
+        NSLog(@"ImageSaved");
+        */
+        
+        
+        
     }
+    
 }
 
 -(BOOL) isUnderMinimumRect{
