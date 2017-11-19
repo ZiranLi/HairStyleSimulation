@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773B5BF1FC0C49800273F3D /* GameViewController.swift */; };
 		905F60EA1B919E8C00094E52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F60E91B919E8C00094E52 /* main.m */; };
 		905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F60EC1B919E8C00094E52 /* AppDelegate.m */; };
 		905F60F01B919E8C00094E52 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 905F60EF1B919E8C00094E52 /* ViewController.mm */; };
@@ -19,7 +20,6 @@
 		905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F61151B91A43B00094E52 /* TouchDrawView.m */; };
 		90DE070C1B92A4FA009311B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */; };
 		90DE07101B92C371009311B8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90DE070F1B92C371009311B8 /* test.jpg */; };
-		EE1916741FBE446600C17923 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1916731FBE446600C17923 /* GameViewController.swift */; };
 		EE1916781FBE4ECF00C17923 /* hair1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE1916771FBE4ECF00C17923 /* hair1.jpg */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7773B5BE1FC0C49800273F3D /* GrabCutIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrabCutIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		7773B5BF1FC0C49800273F3D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		905F60E41B919E8C00094E52 /* GrabCutIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabCutIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		905F60E81B919E8C00094E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		905F60E91B919E8C00094E52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,7 +57,6 @@
 		905F61151B91A43B00094E52 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
 		90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		90DE070F1B92C371009311B8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		EE1916731FBE446600C17923 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		EE1916771FBE4ECF00C17923 /* hair1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hair1.jpg; path = ../../../../../Desktop/hair1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,12 +83,14 @@
 		905F60DB1B919E8C00094E52 = {
 			isa = PBXGroup;
 			children = (
+				7773B5BF1FC0C49800273F3D /* GameViewController.swift */,
 				90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */,
 				905F61101B91A3B700094E52 /* GrabCutIOSPrefix.pch */,
 				905F610D1B91A2C800094E52 /* opencv2.framework */,
 				905F60E61B919E8C00094E52 /* GrabCutIOS */,
 				905F61001B919E8C00094E52 /* GrabCutIOSTests */,
 				905F60E51B919E8C00094E52 /* Products */,
+				7773B5BE1FC0C49800273F3D /* GrabCutIOS-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +110,6 @@
 				EE1916771FBE4ECF00C17923 /* hair1.jpg */,
 				905F61111B91A43B00094E52 /* GrabCutManager.h */,
 				905F61121B91A43B00094E52 /* GrabCutManager.mm */,
-				EE1916731FBE446600C17923 /* GameViewController.swift */,
 				905F61141B91A43B00094E52 /* TouchDrawView.h */,
 				905F61151B91A43B00094E52 /* TouchDrawView.m */,
 				905F60EB1B919E8C00094E52 /* AppDelegate.h */,
@@ -197,7 +199,7 @@
 				TargetAttributes = {
 					905F60E31B919E8C00094E52 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 0900;
 					};
 					905F60FC1B919E8C00094E52 = {
 						CreatedOnToolsVersion = 6.4;
@@ -255,7 +257,7 @@
 				905F60F01B919E8C00094E52 /* ViewController.mm in Sources */,
 				905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */,
 				905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */,
-				EE1916741FBE446600C17923 /* GameViewController.swift in Sources */,
+				7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */,
 				905F60EA1B919E8C00094E52 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +397,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GrabCutIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -415,6 +418,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GrabCutIOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
