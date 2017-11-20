@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773B5BF1FC0C49800273F3D /* GameViewController.swift */; };
+		779EB5B01FC21C8A003329ED /* hair.png in Resources */ = {isa = PBXBuildFile; fileRef = 779EB5AF1FC21A2C003329ED /* hair.png */; };
 		905F60EA1B919E8C00094E52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F60E91B919E8C00094E52 /* main.m */; };
 		905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F60EC1B919E8C00094E52 /* AppDelegate.m */; };
 		905F60F01B919E8C00094E52 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 905F60EF1B919E8C00094E52 /* ViewController.mm */; };
@@ -20,7 +21,6 @@
 		905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F61151B91A43B00094E52 /* TouchDrawView.m */; };
 		90DE070C1B92A4FA009311B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */; };
 		90DE07101B92C371009311B8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90DE070F1B92C371009311B8 /* test.jpg */; };
-		EE1916781FBE4ECF00C17923 /* hair1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE1916771FBE4ECF00C17923 /* hair1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* Begin PBXFileReference section */
 		7773B5BE1FC0C49800273F3D /* GrabCutIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrabCutIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		7773B5BF1FC0C49800273F3D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		779EB5AF1FC21A2C003329ED /* hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair.png; sourceTree = "<group>"; };
 		905F60E41B919E8C00094E52 /* GrabCutIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabCutIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		905F60E81B919E8C00094E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		905F60E91B919E8C00094E52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		905F61151B91A43B00094E52 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
 		90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		90DE070F1B92C371009311B8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		EE1916771FBE4ECF00C17923 /* hair1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hair1.jpg; path = ../../../../../Desktop/hair1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				90DE070F1B92C371009311B8 /* test.jpg */,
-				EE1916771FBE4ECF00C17923 /* hair1.jpg */,
+				779EB5AF1FC21A2C003329ED /* hair.png */,
 				905F61111B91A43B00094E52 /* GrabCutManager.h */,
 				905F61121B91A43B00094E52 /* GrabCutManager.mm */,
 				905F61141B91A43B00094E52 /* TouchDrawView.h */,
@@ -231,7 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1916781FBE4ECF00C17923 /* hair1.jpg in Resources */,
+				779EB5B01FC21C8A003329ED /* hair.png in Resources */,
 				905F60F31B919E8C00094E52 /* Main.storyboard in Resources */,
 				905F60F81B919E8C00094E52 /* LaunchScreen.xib in Resources */,
 				905F60F51B919E8C00094E52 /* Images.xcassets in Resources */,
