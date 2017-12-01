@@ -32,7 +32,7 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        Hair.center = CGPoint(x:160,y:330)
+        Hair.center = CGPoint(x:0,y:0)
         
 
     }
@@ -65,7 +65,11 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     @IBAction func save(_ sender: UIButton) {
         let imageData = UIImageJPEGRepresentation(pickedImage.image!, 0.6)
         let compressedJPEGImage = UIImage(data:imageData!)
-        UIImageWriteToSavedPhotosAlbum(compressedJPEGImage!, nil, nil, nil)
+        
+        //let result=imageByCombiningImage(firstImage: compressedJPEGImage!,withImage: Hair.image!)
+        //UIImageWriteToSavedPhotosAlbum(result, nil, nil, nil)
+        let result = screenSnapshot(save: true)
+        UIImageWriteToSavedPhotosAlbum(result!, nil, nil, nil)
     }
     /*
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -85,7 +89,56 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         dismiss(animated: true, completion: nil)
         
     }
-
+    func imageByCombiningImage(firstImage: UIImage, withImage secondImage: UIImage) -> UIImage {
+        
+        let newImageWidth  = max(firstImage.size.width,  secondImage.size.width )
+        let newImageHeight = max(firstImage.size.height, secondImage.size.height)
+        let newImageSize = CGSize(width : newImageWidth, height: newImageHeight)
+        
+        
+        UIGraphicsBeginImageContextWithOptions(newImageSize, false, UIScreen.main.scale)
+        
+        let firstImageDrawX  = round((newImageSize.width  - firstImage.size.width  ) / 2)
+        let firstImageDrawY  = round((newImageSize.height - firstImage.size.height ) / 2)
+        
+        //let secondImageDrawX = round((newImageSize.width  - secondImage.size.width ) / 2)
+        //let secondImageDrawY = round((newImageSize.height - secondImage.size.height) / 2)
+        
+        //firstImage .draw(at: CGPoint(x: firstImageDrawX,  y: firstImageDrawY))
+        firstImage .draw(at: CGPoint(x: firstImageDrawX,  y: firstImageDrawY))
+        secondImage.draw(at: CGPoint(x:Hair.center.x+50,y:Hair.center.y-50))
+        //print(newImageWidth,firstImage.size.width,secondImage.size.width)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        
+        return image!
+    }
+    
+    
+    func screenSnapshot(save: Bool) -> UIImage? {
+        
+        guard let window = UIApplication.shared.keyWindow else { return nil }
+        // which part of screen we want to crop
+        let size = CGSize(width:pickedImage.bounds.size.width, height:pickedImage.bounds.size.height+50)
+        // 用下面这行而不是UIGraphicsBeginImageContext()，因为前者支持Retina
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        print(window.bounds.size)
+        print(pickedImage.bounds.size)
+        print((pickedImage.image?.size)!)
+        
+        window.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        //if save { UIImageWriteToSavedPhotosAlbum(image!, self, nil, nil) }
+        
+        return image
+    }
     
     
     

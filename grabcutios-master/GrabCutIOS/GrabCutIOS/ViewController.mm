@@ -46,7 +46,7 @@ const static int MAX_IMAGE_LENGTH = 450;
     _grabcut = [[GrabCutManager alloc] init];
     
     _originalImage = [UIImage imageNamed:@"test.jpg"];
-    _resizedImage = [self getProperResizedImage:_originalImage];
+    //_resizedImage = [self getProperResizedImage:_originalImage];
     
     [self initStates];
 }
