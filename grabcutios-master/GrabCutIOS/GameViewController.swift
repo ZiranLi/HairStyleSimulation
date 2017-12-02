@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     var location = CGPoint(x:0, y:0)
+    var ref:DatabaseReference?
     @IBOutlet weak var Hair: UIImageView!
     //@IBOutlet weak var pickedImage: UIImageView!
     @IBOutlet weak var pickedImage: UIImageView!
@@ -30,7 +34,7 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
         // Do any additional setup after loading the view.
         Hair.center = CGPoint(x:0,y:0)
         
@@ -71,6 +75,37 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         let result = screenSnapshot(save: true)
         UIImageWriteToSavedPhotosAlbum(result!, nil, nil, nil)
     }
+    
+    @IBAction func addPost(_ sender: Any) {
+        //TODO: Post the data to firebase
+        let result = screenSnapshot(save: true)
+        
+        let imageName = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("\(imageName).png")
+        if let uploadData = UIImagePNGRepresentation(result!){
+            storageRef.putData(uploadData, metadata: nil,completion: {(metadata, error) in
+            if error != nil{
+                print(error)
+                return
+            }
+            print(metadata)
+                if let shareImageUrl = metadata?.downloadURL()?.absoluteString{
+                let ref = Database.database().reference(fromURL: "https://ec601-f8695.firebaseio.com/")
+                ref.child("ShareToAll").setValue(shareImageUrl);
+                }
+        })
+        }
+
+        
+        
+
+        
+        //Dismiss the popover
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     /*
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
     //func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image:UIImage!,editingInfo:[NSObject:AnyObject]!) {

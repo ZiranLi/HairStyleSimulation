@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		622AC54C97BE884D379A4CF2 /* Pods_GrabCutIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAC711774DD0BB977302919 /* Pods_GrabCutIOS.framework */; };
 		7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773B5BF1FC0C49800273F3D /* GameViewController.swift */; };
 		779EB5B01FC21C8A003329ED /* hair.png in Resources */ = {isa = PBXBuildFile; fileRef = 779EB5AF1FC21A2C003329ED /* hair.png */; };
 		905F60EA1B919E8C00094E52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F60E91B919E8C00094E52 /* main.m */; };
@@ -21,6 +22,12 @@
 		905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F61151B91A43B00094E52 /* TouchDrawView.m */; };
 		90DE070C1B92A4FA009311B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */; };
 		90DE07101B92C371009311B8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90DE070F1B92C371009311B8 /* test.jpg */; };
+		EE5FECB21FD255CC0069D3F1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5FECB11FD255BE0069D3F1 /* AVFoundation.framework */; };
+		EE5FECB41FD2570D0069D3F1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5FECB31FD257030069D3F1 /* AssetsLibrary.framework */; };
+		EE5FECB61FD257560069D3F1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5FECB51FD2574A0069D3F1 /* CoreMedia.framework */; };
+		EE76E9401FD2698D0077F512 /* LoginInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */; };
+		EE8F1F111FD230B300157198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1F101FD230B300157198 /* GoogleService-Info.plist */; };
+		EE8F1F131FD2547500157198 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F1F121FD2547400157198 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28A8766D41B7D1C09A1D8ECF /* Pods-GrabCutIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabCutIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabCutIOS/Pods-GrabCutIOS.release.xcconfig"; sourceTree = "<group>"; };
 		7773B5BE1FC0C49800273F3D /* GrabCutIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrabCutIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		7773B5BF1FC0C49800273F3D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		779EB5AF1FC21A2C003329ED /* hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair.png; sourceTree = "<group>"; };
@@ -58,6 +66,14 @@
 		905F61151B91A43B00094E52 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
 		90DE070B1B92A4FA009311B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		90DE070F1B92C371009311B8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		9CAC711774DD0BB977302919 /* Pods_GrabCutIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabCutIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3924039A3154EEC399BF1FE /* Pods-GrabCutIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabCutIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrabCutIOS/Pods-GrabCutIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EE5FECB11FD255BE0069D3F1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EE5FECB31FD257030069D3F1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EE5FECB51FD2574A0069D3F1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInViewController.swift; sourceTree = "<group>"; };
+		EE8F1F101FD230B300157198 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		EE8F1F121FD2547400157198 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +81,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5FECB61FD257560069D3F1 /* CoreMedia.framework in Frameworks */,
+				EE5FECB41FD2570D0069D3F1 /* AssetsLibrary.framework in Frameworks */,
+				EE5FECB21FD255CC0069D3F1 /* AVFoundation.framework in Frameworks */,
 				90DE070C1B92A4FA009311B8 /* MobileCoreServices.framework in Frameworks */,
 				905F610E1B91A2C800094E52 /* opencv2.framework in Frameworks */,
+				EE8F1F131FD2547500157198 /* opencv2.framework in Frameworks */,
+				622AC54C97BE884D379A4CF2 /* Pods_GrabCutIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +101,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ACDB92B7A6FF2512EE6A365 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3924039A3154EEC399BF1FE /* Pods-GrabCutIOS.debug.xcconfig */,
+				28A8766D41B7D1C09A1D8ECF /* Pods-GrabCutIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A0BDCCB95D952A613178558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE5FECB51FD2574A0069D3F1 /* CoreMedia.framework */,
+				EE5FECB31FD257030069D3F1 /* AssetsLibrary.framework */,
+				EE5FECB11FD255BE0069D3F1 /* AVFoundation.framework */,
+				EE8F1F121FD2547400157198 /* opencv2.framework */,
+				9CAC711774DD0BB977302919 /* Pods_GrabCutIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		905F60DB1B919E8C00094E52 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +133,8 @@
 				905F61001B919E8C00094E52 /* GrabCutIOSTests */,
 				905F60E51B919E8C00094E52 /* Products */,
 				7773B5BE1FC0C49800273F3D /* GrabCutIOS-Bridging-Header.h */,
+				3ACDB92B7A6FF2512EE6A365 /* Pods */,
+				7A0BDCCB95D952A613178558 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +161,7 @@
 				905F60EE1B919E8C00094E52 /* ViewController.h */,
 				905F60EF1B919E8C00094E52 /* ViewController.mm */,
 				905F60F11B919E8C00094E52 /* Main.storyboard */,
+				EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */,
 				905F60F41B919E8C00094E52 /* Images.xcassets */,
 				905F60F61B919E8C00094E52 /* LaunchScreen.xib */,
 				905F60E71B919E8C00094E52 /* Supporting Files */,
@@ -127,6 +172,7 @@
 		905F60E71B919E8C00094E52 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE8F1F101FD230B300157198 /* GoogleService-Info.plist */,
 				905F60E81B919E8C00094E52 /* Info.plist */,
 				905F60E91B919E8C00094E52 /* main.m */,
 			);
@@ -157,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 905F61071B919E8C00094E52 /* Build configuration list for PBXNativeTarget "GrabCutIOS" */;
 			buildPhases = (
+				9EF12E680746498376F5598C /* [CP] Check Pods Manifest.lock */,
 				905F60E01B919E8C00094E52 /* Sources */,
 				905F60E11B919E8C00094E52 /* Frameworks */,
 				905F60E21B919E8C00094E52 /* Resources */,
+				821CFD53B9FAA09C04D2498C /* [CP] Embed Pods Frameworks */,
+				99D7847FD1B9FF78B2AA9B57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +285,7 @@
 				905F60F81B919E8C00094E52 /* LaunchScreen.xib in Resources */,
 				905F60F51B919E8C00094E52 /* Images.xcassets in Resources */,
 				90DE07101B92C371009311B8 /* test.jpg in Resources */,
+				EE8F1F111FD230B300157198 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +298,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		821CFD53B9FAA09C04D2498C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GrabCutIOS/Pods-GrabCutIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrabCutIOS/Pods-GrabCutIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99D7847FD1B9FF78B2AA9B57 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrabCutIOS/Pods-GrabCutIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF12E680746498376F5598C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GrabCutIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		905F60E01B919E8C00094E52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				905F61161B91A43B00094E52 /* GrabCutManager.mm in Sources */,
+				EE76E9401FD2698D0077F512 /* LoginInViewController.swift in Sources */,
 				905F60F01B919E8C00094E52 /* ViewController.mm in Sources */,
 				905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */,
 				905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */,
@@ -384,18 +495,23 @@
 		};
 		905F61081B919E8C00094E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3924039A3154EEC399BF1FE /* Pods-GrabCutIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GrabCutIOSPrefix.pch";
 				INFOPLIST_FILE = GrabCutIOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = naver.GrabCutIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GrabCutIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -405,18 +521,23 @@
 		};
 		905F61091B919E8C00094E52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A8766D41B7D1C09A1D8ECF /* Pods-GrabCutIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GrabCutIOSPrefix.pch";
 				INFOPLIST_FILE = GrabCutIOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = naver.GrabCutIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GrabCutIOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
