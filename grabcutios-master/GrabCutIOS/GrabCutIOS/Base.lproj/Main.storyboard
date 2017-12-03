@@ -180,45 +180,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VjD-ft-5Fb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="361"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VjD-ft-5Fb">
+                                <rect key="frame" x="0.0" y="64" width="374" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="wFC-aV-oGI"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpW-wY-k9F">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpW-wY-k9F">
                                 <rect key="frame" x="8" y="581" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Library"/>
                                 <connections>
                                     <action selector="photoLibrary:" destination="ZWl-zt-5HX" eventType="touchUpInside" id="8B3-hz-Ipg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG2-QT-viq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG2-QT-viq">
                                 <rect key="frame" x="10" y="629" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="save:" destination="ZWl-zt-5HX" eventType="touchUpInside" id="I99-cs-mvp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hair.png" translatesAutoresizingMaskIntoConstraints="NO" id="9TB-1t-Fcm">
-                                <rect key="frame" x="97" y="72" width="229" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT6-ED-JCJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT6-ED-JCJ">
                                 <rect key="frame" x="16" y="537" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Like!"/>
                                 <connections>
                                     <action selector="addPost:" destination="ZWl-zt-5HX" eventType="touchUpInside" id="GOk-3A-yDW"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ko1-03-v0c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="366"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="hair.png" translatesAutoresizingMaskIntoConstraints="NO" id="9TB-1t-Fcm">
+                                        <rect key="frame" x="62" y="53" width="237" height="242"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9TB-1t-Fcm" firstAttribute="leading" secondItem="Ko1-03-v0c" secondAttribute="leading" constant="61" id="0Ye-LK-rMp"/>
+                                    <constraint firstItem="9TB-1t-Fcm" firstAttribute="centerX" secondItem="Ko1-03-v0c" secondAttribute="centerX" constant="-8" id="K1J-O8-I8Q"/>
+                                    <constraint firstItem="9TB-1t-Fcm" firstAttribute="centerY" secondItem="Ko1-03-v0c" secondAttribute="centerY" constant="-10" id="KTU-9S-FoW"/>
+                                    <constraint firstItem="9TB-1t-Fcm" firstAttribute="top" secondItem="Ko1-03-v0c" secondAttribute="top" constant="52" id="XX7-Vy-Hcv"/>
+                                    <constraint firstAttribute="trailing" secondItem="9TB-1t-Fcm" secondAttribute="trailing" constant="77" id="Yyp-mj-f0S"/>
+                                    <constraint firstAttribute="bottom" secondItem="9TB-1t-Fcm" secondAttribute="bottom" constant="72" id="i1A-bn-ywq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="ZWl-zt-5HX" id="bRX-hU-qpl"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RG2-QT-viq" firstAttribute="leading" secondItem="lV5-aq-TFx" secondAttribute="leadingMargin" constant="-6" id="0tR-uZ-KrJ"/>
+                            <constraint firstItem="LpW-wY-k9F" firstAttribute="top" secondItem="zT6-ED-JCJ" secondAttribute="bottom" constant="14" id="3LR-99-yGw"/>
+                            <constraint firstItem="VjD-ft-5Fb" firstAttribute="top" secondItem="fpD-wS-wDL" secondAttribute="bottom" id="3co-Fv-0SL"/>
+                            <constraint firstItem="Ko1-03-v0c" firstAttribute="top" secondItem="fpD-wS-wDL" secondAttribute="bottom" id="C4M-cF-9eU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ko1-03-v0c" secondAttribute="trailing" constant="-16" id="CAz-z2-PoH"/>
+                            <constraint firstItem="Ko1-03-v0c" firstAttribute="leading" secondItem="lV5-aq-TFx" secondAttribute="leadingMargin" constant="-16" id="LbK-kf-HbO"/>
+                            <constraint firstItem="VjD-ft-5Fb" firstAttribute="centerX" secondItem="lV5-aq-TFx" secondAttribute="centerX" id="Lmr-Tg-slT"/>
+                            <constraint firstItem="VjD-ft-5Fb" firstAttribute="leading" secondItem="lV5-aq-TFx" secondAttribute="leading" id="Mq1-n8-Jxh"/>
+                            <constraint firstItem="zT6-ED-JCJ" firstAttribute="centerX" secondItem="LpW-wY-k9F" secondAttribute="centerX" id="QKm-FM-qLa"/>
+                            <constraint firstItem="1en-de-CXE" firstAttribute="top" secondItem="Ko1-03-v0c" secondAttribute="bottom" constant="237" id="cjR-NW-6W1"/>
+                            <constraint firstItem="zT6-ED-JCJ" firstAttribute="leading" secondItem="lV5-aq-TFx" secondAttribute="leadingMargin" id="gCf-rW-R6T"/>
+                            <constraint firstItem="1en-de-CXE" firstAttribute="top" secondItem="RG2-QT-viq" secondAttribute="bottom" constant="8" symbolic="YES" id="h7r-cq-hgH"/>
+                            <constraint firstItem="RG2-QT-viq" firstAttribute="top" secondItem="LpW-wY-k9F" secondAttribute="bottom" constant="18" id="m1J-mQ-Wpo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="06N-uC-JeL"/>
                     <connections>
                         <outlet property="Hair" destination="9TB-1t-Fcm" id="1Ek-mH-Ykk"/>
                         <outlet property="pickedImage" destination="VjD-ft-5Fb" id="7OP-jo-FEY"/>
+                        <outlet property="scrollView" destination="Ko1-03-v0c" id="s0l-Tu-2i9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBA-pU-IAX" userLabel="First Responder" sceneMemberID="firstResponder"/>

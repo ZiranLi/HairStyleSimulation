@@ -11,11 +11,13 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate {
     var location = CGPoint(x:0, y:0)
     var ref:DatabaseReference?
     @IBOutlet weak var Hair: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     //@IBOutlet weak var pickedImage: UIImageView!
+    
     @IBOutlet weak var pickedImage: UIImageView!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //var touch : UITouch! = touches.anyObject() as UITouch
@@ -37,7 +39,8 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
         Hair.center = CGPoint(x:0,y:0)
-        
+        self.scrollView.minimumZoomScale = 0.5//scale
+        self.scrollView.maximumZoomScale = 1.5
 
     }
 
@@ -174,7 +177,10 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         
         return image
     }
-    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+//    
+        return self.Hair
+    }
     
     
 }
