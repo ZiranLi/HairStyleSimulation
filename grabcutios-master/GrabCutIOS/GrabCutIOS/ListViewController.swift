@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
-
+class ListViewController: UITableViewController,UITableViewDataSource,UITableViewDelegate {
+    @IBOutlet weak var imgImage: UIImageView!
+    
+    var imageArray = [UIImage(named:"1"),UIImage(named:"2"),UIImage(named:"3"),UIImage(named:"4"),]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -91,5 +93,15 @@ class ListViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return imageArray.count // number of table view cells!!!!!!!!!!!!!!!!!!!!!!!
+        
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+        cell.imgImage.image = imageArray[indexPath.row]
+        return cell
+    }
 
 }

@@ -29,6 +29,7 @@
 		EE8F1F111FD230B300157198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1F101FD230B300157198 /* GoogleService-Info.plist */; };
 		EE8F1F131FD2547500157198 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F1F121FD2547400157198 /* opencv2.framework */; };
 		F904597F1FD607600018CFC5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904597E1FD607600018CFC5 /* ListViewController.swift */; };
+		F90459811FD66EE80018CFC5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90459801FD66EE80018CFC5 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		EE8F1F101FD230B300157198 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EE8F1F121FD2547400157198 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		F904597E1FD607600018CFC5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F90459801FD66EE80018CFC5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				905F60EE1B919E8C00094E52 /* ViewController.h */,
 				905F60EF1B919E8C00094E52 /* ViewController.mm */,
 				905F60F11B919E8C00094E52 /* Main.storyboard */,
+				F90459801FD66EE80018CFC5 /* TableViewCell.swift */,
 				F904597E1FD607600018CFC5 /* ListViewController.swift */,
 				EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */,
 				905F60F41B919E8C00094E52 /* Images.xcassets */,
@@ -369,6 +372,7 @@
 				905F61161B91A43B00094E52 /* GrabCutManager.mm in Sources */,
 				EE76E9401FD2698D0077F512 /* LoginInViewController.swift in Sources */,
 				905F60F01B919E8C00094E52 /* ViewController.mm in Sources */,
+				F90459811FD66EE80018CFC5 /* TableViewCell.swift in Sources */,
 				905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */,
 				905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */,
 				7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */,
