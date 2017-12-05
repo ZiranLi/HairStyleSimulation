@@ -28,6 +28,7 @@
 		EE76E9401FD2698D0077F512 /* LoginInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */; };
 		EE8F1F111FD230B300157198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1F101FD230B300157198 /* GoogleService-Info.plist */; };
 		EE8F1F131FD2547500157198 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F1F121FD2547400157198 /* opencv2.framework */; };
+		F904597F1FD607600018CFC5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904597E1FD607600018CFC5 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInViewController.swift; sourceTree = "<group>"; };
 		EE8F1F101FD230B300157198 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EE8F1F121FD2547400157198 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		F904597E1FD607600018CFC5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				905F60EE1B919E8C00094E52 /* ViewController.h */,
 				905F60EF1B919E8C00094E52 /* ViewController.mm */,
 				905F60F11B919E8C00094E52 /* Main.storyboard */,
+				F904597E1FD607600018CFC5 /* ListViewController.swift */,
 				EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */,
 				905F60F41B919E8C00094E52 /* Images.xcassets */,
 				905F60F61B919E8C00094E52 /* LaunchScreen.xib */,
@@ -369,6 +372,7 @@
 				905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */,
 				905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */,
 				7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */,
+				F904597F1FD607600018CFC5 /* ListViewController.swift in Sources */,
 				905F60EA1B919E8C00094E52 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
