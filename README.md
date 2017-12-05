@@ -1,3 +1,8 @@
+# EC601 Hairstyle Simulation
+Copyright Xiang Zheng, Yinzhu Su, Ziran Li
+# Trello link: https://trello.com/b/KEP6SeFv/hair-style-simulation1
+
+# Algorithm we used:
 # GrabCutIOS
 Image segmentation using GrabCut algorithm in IOS 
 
@@ -81,3 +86,4 @@ See [LICENSE](/LICENSE) for full license text.
         See the License for the specific language governing permissions and
         limitations under the License.
 
+# to be continued...
