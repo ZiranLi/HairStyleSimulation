@@ -11,6 +11,8 @@ import UIKit
 class ListViewController: UITableViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var imgImage: UIImageView!
     
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UILabel!
     var imageArray = [UIImage(named:"1"),UIImage(named:"2"),UIImage(named:"3"),UIImage(named:"4"),]
     override func viewDidLoad() {
         super.viewDidLoad()

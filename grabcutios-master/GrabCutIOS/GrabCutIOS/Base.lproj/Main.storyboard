@@ -323,6 +323,9 @@
                             <constraint firstAttribute="trailing" secondItem="aaE-cP-zfq" secondAttribute="trailing" id="oAc-tb-Kyn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="o1W-Es-9Mk" id="Yis-cQ-Vce"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbJ-iO-L44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
