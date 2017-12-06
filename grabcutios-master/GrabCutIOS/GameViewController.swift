@@ -10,16 +10,14 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
-import CoreImage
 
 class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate {
     var location = CGPoint(x:0, y:0)
     var ref:DatabaseReference?
-    var getname = String()
-    var getImage = UIImage()
     @IBOutlet weak var Hair: UIImageView!
-    
     @IBOutlet weak var scrollView: UIScrollView!
+    //@IBOutlet weak var pickedImage: UIImageView!
+    
     @IBOutlet weak var pickedImage: UIImageView!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //var touch : UITouch! = touches.anyObject() as UITouch
@@ -43,20 +41,9 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         Hair.center = CGPoint(x:0,y:0)
         self.scrollView.minimumZoomScale = 0.5//scale
         self.scrollView.maximumZoomScale = 1.5
-        
-        
-        //personPic.image = UIImage(named: "face-1")
-        
-        //pickedImage.image = UIImage(named: "face-1")  //如果写这句，那么点击了hair之后的下一个环节就一定会出现这幅图，用户没有机会从相册里面选了，但是又一定要给detect face模块一个输入，所以建议改个名字不叫pickedImage.image，比如，这里可以写 detectImage.image = UIImage(image: pickedImage.image!)
-        
-        //需要给pickedImage赋一个值，然后detect函数才能用得上
-        
-        Hair.image = getImage
-
 
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -90,101 +77,7 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         //UIImageWriteToSavedPhotosAlbum(result, nil, nil, nil)
         let result = screenSnapshot(save: true)
         UIImageWriteToSavedPhotosAlbum(result!, nil, nil, nil)
-
-        //detect()
     }
-    @IBAction func Recommend(_ sender: UIButton){
-        detect()
-    
-    }
-    
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    
-    func detect() {
-        
-        guard let personciImage = CIImage(image: pickedImage.image!) else {
-            return
-        }
-        
-        let accuracy = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
-        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy)
-        let faces = faceDetector?.features(in: personciImage)
-        
-        // Convert Core Image Coordinate to UIView Coordinate
-        let ciImageSize = personciImage.extent.size
-        var transform = CGAffineTransform(scaleX: 1, y: -1)
-        transform = transform.translatedBy(x: 0, y: -ciImageSize.height)
-        
-        for face in faces as! [CIFaceFeature] {
-            
-            print("Found bounds are \(face.bounds)")
-            
-            // Apply the transform to convert the coordinates
-            var faceViewBounds = face.bounds.applying(transform)
-            
-            // Calculate the actual position and size of the rectangle in the image view
-            let viewSize = pickedImage.bounds.size
-            let scale = min(viewSize.width / ciImageSize.width,
-                            viewSize.height / ciImageSize.height)
-            let offsetX = (viewSize.width - ciImageSize.width * scale) / 2
-            let offsetY = (viewSize.height - ciImageSize.height * scale) / 2
-            
-            faceViewBounds = faceViewBounds.applying(CGAffineTransform(scaleX: scale, y: scale))
-            faceViewBounds.origin.x += offsetX
-            faceViewBounds.origin.y += offsetY
-            
-            let faceBox = UIView(frame: faceViewBounds)
-            
-            faceBox.layer.borderWidth = 2
-            faceBox.layer.borderColor = UIColor.yellow.cgColor
-            faceBox.backgroundColor = UIColor.clear
-            pickedImage.addSubview(faceBox)
-            
-            if face.hasLeftEyePosition {
-                print("Left eye bounds are \(face.leftEyePosition)")
-            }
-            
-            if face.hasRightEyePosition {
-                print("Right eye bounds are \(face.rightEyePosition)")
-            }
-            
-            print("Mouth position is\(face.mouthPosition)")
-            
-            
-            
-            //以下为计算双眼距离和嘴到双眼的距离的比例，从而判断脸型
-            let eyesgap = sqrt(pow((face.rightEyePosition.x - face.leftEyePosition.x),2) + pow((face.rightEyePosition.y - face.leftEyePosition.y),2))
-            let k = (face.rightEyePosition.y - face.leftEyePosition.y)/(face.rightEyePosition.x - face.leftEyePosition.x)
-            let moutheyesgap = ((k * face.mouthPosition.x - face.mouthPosition.y) + (face.leftEyePosition.y - k * face.leftEyePosition.x))/(sqrt(k*k + 1))
-            let ratio = eyesgap/moutheyesgap
-            
-            print("\n")
-            print("The gap between two eyes is \(eyesgap)\n")
-            print("The gap between mouth and eyes is \(moutheyesgap)\n")
-            print("The ratio of eyesgap and moutheyesgap is \(ratio)\n")
-            
-            
-            //区别脸长脸短的阈值需要多实验几次！！
-            if ratio > 0.9 { //脸短
-                print("According to your face shape, this hair style is suitable for you: HairStyle1 \n")
-            }
-            
-            if ratio < 0.9 { //脸长
-                print("According to your face shape, this hair style is suitable for you: HairStyle2 \n")
-            }
-            
-            //print("The ratio ", pow(2,3), sqrt(49), face.rightEyePosition.x - face.leftEyePosition.x, Int(face.rightEyePosition.x - face.leftEyePosition.x) )
-            //print("POW iNT", powf(2,3))
-            //print("The face width is \(face.bounds.size.width)")
-            //print("The face height is \(face.bounds.size.height)")
-            
-        }
-    }
-    
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    
     
     @IBAction func addPost(_ sender: Any) {
         //TODO: Post the data to firebase
@@ -204,7 +97,7 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
                 ref.child("ShareToAll").setValue(shareImageUrl);
                 }
         })
-    }
+        }
 
         
         
@@ -270,10 +163,9 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         let size = CGSize(width:pickedImage.bounds.size.width, height:pickedImage.bounds.size.height+50)
         // 用下面这行而不是UIGraphicsBeginImageContext()，因为前者支持Retina
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        //print(window.bounds.size)
-        //print(pickedImage.bounds.size)
-        //print((pickedImage.image?.size)!)
-        print("aaaa",pickedImage.image)
+        print(window.bounds.size)
+        print(pickedImage.bounds.size)
+        print((pickedImage.image?.size)!)
         
         window.layer.render(in: UIGraphicsGetCurrentContext()!)
         
