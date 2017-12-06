@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		622AC54C97BE884D379A4CF2 /* Pods_GrabCutIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAC711774DD0BB977302919 /* Pods_GrabCutIOS.framework */; };
 		7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773B5BF1FC0C49800273F3D /* GameViewController.swift */; };
+		7799D73A1FD5F6DD0058907A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7799D7391FD5F6DC0058907A /* CoreImage.framework */; };
+		7799D73C1FD6047E0058907A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7799D73B1FD6047E0058907A /* UIKit.framework */; };
 		779EB5B01FC21C8A003329ED /* hair.png in Resources */ = {isa = PBXBuildFile; fileRef = 779EB5AF1FC21A2C003329ED /* hair.png */; };
 		905F60EA1B919E8C00094E52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F60E91B919E8C00094E52 /* main.m */; };
 		905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 905F60EC1B919E8C00094E52 /* AppDelegate.m */; };
@@ -28,7 +30,8 @@
 		EE76E9401FD2698D0077F512 /* LoginInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */; };
 		EE8F1F111FD230B300157198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1F101FD230B300157198 /* GoogleService-Info.plist */; };
 		EE8F1F131FD2547500157198 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F1F121FD2547400157198 /* opencv2.framework */; };
-		F904597F1FD607600018CFC5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904597E1FD607600018CFC5 /* ListViewController.swift */; };
+		EEAA5C311FD773E70029106E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA5C301FD773E70029106E /* TableViewCell.swift */; };
+		EEAA5C371FD776430029106E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA5C361FD776430029106E /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 		28A8766D41B7D1C09A1D8ECF /* Pods-GrabCutIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabCutIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabCutIOS/Pods-GrabCutIOS.release.xcconfig"; sourceTree = "<group>"; };
 		7773B5BE1FC0C49800273F3D /* GrabCutIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrabCutIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		7773B5BF1FC0C49800273F3D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		7799D7391FD5F6DC0058907A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		7799D73B1FD6047E0058907A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		779EB5AF1FC21A2C003329ED /* hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair.png; sourceTree = "<group>"; };
 		905F60E41B919E8C00094E52 /* GrabCutIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabCutIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		905F60E81B919E8C00094E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +80,8 @@
 		EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInViewController.swift; sourceTree = "<group>"; };
 		EE8F1F101FD230B300157198 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EE8F1F121FD2547400157198 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		F904597E1FD607600018CFC5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		EEAA5C301FD773E70029106E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		EEAA5C361FD776430029106E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7799D73C1FD6047E0058907A /* UIKit.framework in Frameworks */,
+				7799D73A1FD5F6DD0058907A /* CoreImage.framework in Frameworks */,
 				EE5FECB61FD257560069D3F1 /* CoreMedia.framework in Frameworks */,
 				EE5FECB41FD2570D0069D3F1 /* AssetsLibrary.framework in Frameworks */,
 				EE5FECB21FD255CC0069D3F1 /* AVFoundation.framework in Frameworks */,
@@ -115,6 +123,8 @@
 		7A0BDCCB95D952A613178558 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7799D73B1FD6047E0058907A /* UIKit.framework */,
+				7799D7391FD5F6DC0058907A /* CoreImage.framework */,
 				EE5FECB51FD2574A0069D3F1 /* CoreMedia.framework */,
 				EE5FECB31FD257030069D3F1 /* AssetsLibrary.framework */,
 				EE5FECB11FD255BE0069D3F1 /* AVFoundation.framework */,
@@ -163,7 +173,8 @@
 				905F60EE1B919E8C00094E52 /* ViewController.h */,
 				905F60EF1B919E8C00094E52 /* ViewController.mm */,
 				905F60F11B919E8C00094E52 /* Main.storyboard */,
-				F904597E1FD607600018CFC5 /* ListViewController.swift */,
+				EEAA5C301FD773E70029106E /* TableViewCell.swift */,
+				EEAA5C361FD776430029106E /* TableViewController.swift */,
 				EE76E93F1FD2698D0077F512 /* LoginInViewController.swift */,
 				905F60F41B919E8C00094E52 /* Images.xcassets */,
 				905F60F61B919E8C00094E52 /* LaunchScreen.xib */,
@@ -367,12 +378,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				905F61161B91A43B00094E52 /* GrabCutManager.mm in Sources */,
+				EEAA5C311FD773E70029106E /* TableViewCell.swift in Sources */,
 				EE76E9401FD2698D0077F512 /* LoginInViewController.swift in Sources */,
 				905F60F01B919E8C00094E52 /* ViewController.mm in Sources */,
 				905F61181B91A43B00094E52 /* TouchDrawView.m in Sources */,
 				905F60ED1B919E8C00094E52 /* AppDelegate.m in Sources */,
 				7773B5C01FC0C49800273F3D /* GameViewController.swift in Sources */,
-				F904597F1FD607600018CFC5 /* ListViewController.swift in Sources */,
+				EEAA5C371FD776430029106E /* TableViewController.swift in Sources */,
 				905F60EA1B919E8C00094E52 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
