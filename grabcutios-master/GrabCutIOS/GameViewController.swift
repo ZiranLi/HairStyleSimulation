@@ -149,10 +149,36 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
                 print("Right eye bounds are \(face.rightEyePosition)")
             }
             
-            print("The face width is \(face.bounds.size.width)")
+            print("Mouth position is\(face.mouthPosition)")
             
-            print("The face height is \(face.bounds.size.height)")
-        
+            
+            
+            //以下为计算双眼距离和嘴到双眼的距离的比例，从而判断脸型
+            let eyesgap = sqrt(pow((face.rightEyePosition.x - face.leftEyePosition.x),2) + pow((face.rightEyePosition.y - face.leftEyePosition.y),2))
+            let k = (face.rightEyePosition.y - face.leftEyePosition.y)/(face.rightEyePosition.x - face.leftEyePosition.x)
+            let moutheyesgap = ((k * face.mouthPosition.x - face.mouthPosition.y) + (face.leftEyePosition.y - k * face.leftEyePosition.x))/(sqrt(k*k + 1))
+            let ratio = eyesgap/moutheyesgap
+            
+            print("\n")
+            print("The gap between two eyes is \(eyesgap)\n")
+            print("The gap between mouth and eyes is \(moutheyesgap)\n")
+            print("The ratio of eyesgap and moutheyesgap is \(ratio)\n")
+            
+            
+            //区别脸长脸短的阈值需要多实验几次！！
+            if ratio > 0.9 { //脸短
+                print("According to your face shape, this hair style is suitable for you: HairStyle1 \n")
+            }
+            
+            if ratio < 0.9 { //脸长
+                print("According to your face shape, this hair style is suitable for you: HairStyle2 \n")
+            }
+            
+            //print("The ratio ", pow(2,3), sqrt(49), face.rightEyePosition.x - face.leftEyePosition.x, Int(face.rightEyePosition.x - face.leftEyePosition.x) )
+            //print("POW iNT", powf(2,3))
+            //print("The face width is \(face.bounds.size.width)")
+            //print("The face height is \(face.bounds.size.height)")
+            
         }
     }
     
